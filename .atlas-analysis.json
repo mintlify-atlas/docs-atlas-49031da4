@@ -1,0 +1,86 @@
+{
+  "projectType": "ai-ml",
+  "projectName": "LuaN1aoAgent",
+  "projectDescription": "A fully autonomous AI penetration testing agent powered by DeepSeek V3.2, using dual-graph reasoning (Cognitive Causal Graph + Dynamic Task Graph) to achieve a 90.4% success rate on the XBOW Benchmark with a median exploit cost of $0.09.",
+  "theme": "aspen",
+  "primaryColor": "#94cb04",
+  "lightColor": "#545454",
+  "darkColor": null,
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "installation"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/per-framework",
+              "concepts/causal-graph",
+              "concepts/plan-on-graph",
+              "concepts/architecture"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/configuration",
+              "guides/rag-knowledge-base",
+              "guides/web-ui",
+              "guides/human-in-the-loop",
+              "guides/tool-integration",
+              "guides/running-modes"
+            ]
+          },
+          {
+            "group": "Benchmark & Results",
+            "pages": [
+              "benchmark/xbow-results",
+              "benchmark/ablation-study"
+            ]
+          },
+          {
+            "group": "Reference",
+            "pages": [
+              "reference/configuration-options",
+              "reference/cli-reference",
+              "reference/mcp-tools",
+              "reference/changelog"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "P-E-R (Planner-Executor-Reflector) multi-agent collaboration framework",
+    "Cognitive Causal Graph (CCG) for evidence-driven reasoning and hallucination prevention",
+    "Plan-on-Graph (PoG) dynamic DAG-based task planning with real-time adaptation",
+    "90.4% success rate on XBOW Benchmark with $0.09 median exploit cost",
+    "MCP (Model Context Protocol) for unified tool integration (HTTP, shell, Python execution)",
+    "RAG knowledge enhancement powered by FAISS and PayloadsAllTheThings",
+    "Real-time web visualization dashboard for task graph monitoring",
+    "Human-in-the-Loop (HITL) mode for expert supervision and plan injection",
+    "Support for OpenAI-compatible APIs including DeepSeek, GPT-4o, Claude",
+    "SQLite-backed persistent task history and metrics logging"
+  ],
+  "publicApiSurface": [
+    "agent.py --goal <goal> --task-name <name> [--mode default|linear|react]",
+    "python -m web.server (Web dashboard on http://localhost:8088)",
+    "python -m rag.rag_kdprepare (knowledge base index builder)",
+    "GraphManager (core DAG task graph engine)",
+    "Planner (strategic planning agent with graph operation language)",
+    "Executor (run_executor_cycle - tactical tool-calling agent)",
+    "Reflector (failure attribution, causal graph updates, goal achievement detection)",
+    "LLMClient (unified LLM interface supporting OpenAI and Anthropic providers)",
+    "KnowledgeServiceManager (RAG knowledge service lifecycle manager)",
+    "MCP tools: http_request, shell_exec, python_exec, think, formulate_hypotheses, reflect_on_failure, halt_task, query_causal_graph"
+  ]
+}
